@@ -1,0 +1,10 @@
+#!/bin/bash 
+read -p "Enter path of payload file:" IFILES
+read -p "Enter path of installer script:" ISCRIPT
+
+tar czf payload.tar.gz $IFILES $ISCRIPT
+
+cat decompress payload.tar.gz > setup
+chmod u+x setup
+
+
